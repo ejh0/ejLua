@@ -20,7 +20,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
     Frame.Position = UDim2.new(0.442,0,0.427,0)
 Frame.Size = UDim2.new(0,340,0,170)
 
-TextBox1.Text = "ej Scripts"
+TextBox1.Text = "ej Lua"
     TextBox1.Active = true
         TextBox1.TextColor3 = Color3.fromRGB(255, 135, 0)
             TextBox1.TextSize = 27
