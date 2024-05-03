@@ -38,7 +38,7 @@ TextBox2.Text = "Made by EJ"
     TextBox2.Font = Enum.Font.RobotoMono
 TextBox2.Position = UDim2.new(-0.142,0,-0.118,0)
 
-TextBox3.Text = "STATUS: ACTIVE"
+TextBox3.Text = " "
     TextBox3.Active = true
         TextBox3.TextColor3 = Color3.fromRGB(0, 255, 0)
             TextBox3.TextSize = 38
@@ -47,7 +47,14 @@ TextBox3.Text = "STATUS: ACTIVE"
     TextBox3.Font = Enum.Font.RobotoMono
 TextBox3.Position = UDim2.new(0.203,0,0.437,0)
 
-localPlayer.Idled:connect(function()
-    VirtualUser:CaptureController()
-    VirtualUser:ClickButton2(Vector2.new())
-end)
+if not localPlayer then
+    TextBox3.Text = "STATUS: INACTIVE"
+    TextBox3.TextColor3 = Color3.fromRGB(255, 0, 0)
+        else
+    TextBox3.Text = "STATUS: ACTIVE"
+    TextBox3.TextColor3 = Color3.fromRGB(0, 255, 0)
+        localPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)  
+end
