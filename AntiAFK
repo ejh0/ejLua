@@ -1,4 +1,3 @@
-local localPlayer = game:GetService("Players").LocalPlayer
 local VirtualUser = game:GetService("VirtualUser")
 local StarterGui = game:GetService("CoreGui")
 
@@ -40,21 +39,25 @@ TextBox2.Position = UDim2.new(-0.142,0,-0.118,0)
 
 TextBox3.Text = " "
     TextBox3.Active = true
-        TextBox3.TextColor3 = Color3.fromRGB(0, 255, 0)
+        TextBox3.TextColor3 = Color3.fromRGB(255, 0, 0)
             TextBox3.TextSize = 38
             TextBox3.BackgroundTransparency = 1
         TextBox3.Size = UDim2.new(0,200,0,50)
     TextBox3.Font = Enum.Font.RobotoMono
 TextBox3.Position = UDim2.new(0.203,0,0.437,0)
 
-if not localPlayer then
+if not game:GetService("Players").LocalPlayer then
     TextBox3.Text = "STATUS: INACTIVE"
-    TextBox3.TextColor3 = Color3.fromRGB(255, 0, 0)
+        TextBox3.TextColor3 = Color3.fromRGB(255, 0, 0)
+    error("Failed to terminate Roblox's Anti AFK System")
         else
     TextBox3.Text = "STATUS: ACTIVE"
     TextBox3.TextColor3 = Color3.fromRGB(0, 255, 0)
-        localPlayer.Idled:connect(function()
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
             VirtualUser:CaptureController()
         VirtualUser:ClickButton2(Vector2.new())
     end)  
 end
+
+warn("[*] ANTI AFK ENABLED")
+warn("[*] Made by @evanaleda")
