@@ -697,7 +697,7 @@ function library:Introduction()
     xsx.BackgroundTransparency = 1.000
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
-    xsx.Text = "EJ SCRIPTS"
+    xsx.Text = "@evanaleda"
     xsx.TextColor3 = Color3.fromRGB(255, 255, 255)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
@@ -709,7 +709,7 @@ function library:Introduction()
     text.Position = UDim2.new(0.912751675, 0, 0, 0)
     text.Size = UDim2.new(0, 26, 0, 21)
     text.Font = Enum.Font.Code
-    text.Text = "ALEDA SEXY"
+    text.Text = " "
     text.TextColor3 = Color3.fromRGB(255, 255, 255)
     text.TextSize = 10.000
     text.TextTransparency = 1
